@@ -1,0 +1,10 @@
+import { chromium } from "playwright";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 2 });
+await page.goto("http://localhost:5173/", { waitUntil: "networkidle" });
+await page.waitForTimeout(600);
+await page.locator("button", { hasText: "SmartHighlight" }).first().click();
+await page.waitForTimeout(1200);
+await page.screenshot({ path: ".shot-screen2.png", fullPage: true });
+await browser.close();
+console.log("saved");

@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Vector" clip-path="url(#clip0_0_2233)">
+<path id="Vector_2" d="M5.71387 1.99023C5.96278 1.46309 6.65947 1.33391 7.08203 1.73633V1.7373L7.63184 2.26953L13.2881 8.34668C13.6586 8.74536 13.5233 9.38714 13.0342 9.60449L13.0264 9.6084L13.0195 9.61133L3.70117 14.124L3.0957 14.3984C2.67377 14.5886 2.18477 14.5069 1.85547 14.1904L1.85156 14.1865L0.860352 13.2529C0.519825 12.9303 0.409875 12.4341 0.577148 12L0.614258 11.9141L5.70605 2.00488L5.70996 1.99707L5.71387 1.99023Z" stroke="var(--stroke-0, #6D81A6)"/>
+<path id="Vector_3" d="M10.5 0.5V1.5" stroke="var(--stroke-0, #6D81A6)" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M14.5 5.5H15.5" stroke="var(--stroke-0, #6D81A6)" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M12.5 3.5L14.5 1.5" stroke="var(--stroke-0, #6D81A6)" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Ellipse 26" d="M9.67461 11C9.88194 11.3867 10 11.8318 10 12.3055C10 13.7936 8.83455 15 7.39689 15C6.32015 15 5.3961 14.3233 5 13.3584" stroke="var(--stroke-0, #6D81A6)"/>
+</g>
+<defs>
+<clipPath id="clip0_0_2233">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

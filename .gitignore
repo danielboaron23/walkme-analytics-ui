@@ -29,3 +29,4 @@ overview.png
 # more scratch / build cache
 .final*.png
 *.tsbuildinfo
+.live*.png

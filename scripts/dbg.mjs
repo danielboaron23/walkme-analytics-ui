@@ -1,0 +1,16 @@
+import { chromium } from "playwright";
+const b = await chromium.launch();
+const p = await b.newPage({ viewport:{width:1920,height:1080}, deviceScaleFactor:1 });
+const errs=[];
+p.on("console", m=>{ if(m.type()==="error") errs.push(m.text()); });
+p.on("pageerror", e=>errs.push("PAGEERR: "+e.message));
+await p.goto("http://localhost:5173/", {waitUntil:"networkidle"});
+await p.waitForTimeout(500);
+const rowBtn = p.locator("button", { hasText: "SmartHighlight" }).first();
+console.log("row count:", await p.locator("button", { hasText: "SmartHighlight" }).count());
+await rowBtn.click();
+await p.waitForTimeout(800);
+const hasOverview = await p.getByText("Users analysis funnel").count();
+console.log("overview visible:", hasOverview);
+console.log("errors:", errs.slice(0,10).join("\n"));
+await b.close();

@@ -1,0 +1,31 @@
+# dependencies
+node_modules
+
+# build output
+dist
+storybook-static
+
+# logs
+*.log
+
+# os / editor
+.DS_Store
+*.local
+.idea
+.vscode
+
+# temp screenshots / scratch (Playwright + Figma refs used during dev)
+.ref*.png
+.shot*.png
+.cmp*.png
+.my*.png
+.crop*.png
+.v-*.png
+.d1-*.png
+.d2-*.png
+.sb-*.png
+overview.png
+
+# more scratch / build cache
+.final*.png
+*.tsbuildinfo

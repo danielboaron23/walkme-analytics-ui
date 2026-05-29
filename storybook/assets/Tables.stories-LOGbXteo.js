@@ -1,0 +1,8 @@
+import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{S as y,M as h}from"./SwtLoading-CJXUoEY5.js";import{S as W}from"./SwtSummaryTable-DDrKn_-f.js";import"./Icon-Crsy-5kb.js";import"./Pagination-CpvwKb3A.js";import"./utils-BEhiKRD9.js";import"./StatusBadge-CApHojz9.js";import"./Avatar-DKrS5qVR.js";const w={title:"Components/Tables",parameters:{layout:"fullscreen"}},o=({children:u})=>e.jsx("div",{className:"bg-bg-app",style:{padding:24,minWidth:1200},children:u}),r={render:()=>e.jsx(o,{children:e.jsx(h,{onSelectSystem:()=>{}})})},a={name:"SWT Summary (hover a Name for the link chip)",render:()=>e.jsx(o,{children:e.jsx(W,{onOpenDetail:()=>{}})})},s={render:()=>e.jsx(o,{children:e.jsx(y,{})})};var t,m,n;r.parameters={...r.parameters,docs:{...(t=r.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  render: () => <Wrap><MonitoredSystemsTable onSelectSystem={() => {}} /></Wrap>
+}`,...(n=(m=r.parameters)==null?void 0:m.docs)==null?void 0:n.source}}};var p,i,c;a.parameters={...a.parameters,docs:{...(p=a.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  name: "SWT Summary (hover a Name for the link chip)",
+  render: () => <Wrap><SwtSummaryTable onOpenDetail={() => {}} /></Wrap>
+}`,...(c=(i=a.parameters)==null?void 0:i.docs)==null?void 0:c.source}}};var d,S,l;s.parameters={...s.parameters,docs:{...(d=s.parameters)==null?void 0:d.docs,source:{originalSource:`{
+  render: () => <Wrap><SwtLoading /></Wrap>
+}`,...(l=(S=s.parameters)==null?void 0:S.docs)==null?void 0:l.source}}};const L=["MonitoredSystems","SmartWalkThrusSummary","LoadingSkeleton"];export{s as LoadingSkeleton,r as MonitoredSystems,a as SmartWalkThrusSummary,L as __namedExportsOrder,w as default};

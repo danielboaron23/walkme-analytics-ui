@@ -1,6 +1,6 @@
 import {
-  BarChart,
-  Bar,
+  LineChart,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -38,7 +38,7 @@ function AxisTick({ x, y, payload }: any) {
 export function TopSystemsBarChart() {
   return (
     <ResponsiveContainer width="100%" height={218}>
-      <BarChart data={DATA} barGap={4} barCategoryGap="22%" margin={{ top: 8, right: 0, bottom: 0, left: -8 }}>
+      <LineChart data={DATA} margin={{ top: 8, right: 8, bottom: 0, left: -8 }}>
         <CartesianGrid vertical={false} stroke="#ebeff7" />
         <XAxis
           dataKey="system"
@@ -57,9 +57,23 @@ export function TopSystemsBarChart() {
           tick={{ fill: "#616f8f", fontSize: 12, fontFamily: "var(--font-body)" }}
           tickFormatter={formatK}
         />
-        <Bar dataKey="active" fill={ACTIVE} barSize={59} radius={[4, 4, 0, 0]} isAnimationActive={false} />
-        <Bar dataKey="interacted" fill={INTERACTED} barSize={59} radius={[4, 4, 0, 0]} isAnimationActive={false} />
-      </BarChart>
+        <Line
+          type="linear"
+          dataKey="active"
+          stroke={ACTIVE}
+          strokeWidth={1.75}
+          dot={false}
+          isAnimationActive={false}
+        />
+        <Line
+          type="linear"
+          dataKey="interacted"
+          stroke={INTERACTED}
+          strokeWidth={1.75}
+          dot={false}
+          isAnimationActive={false}
+        />
+      </LineChart>
     </ResponsiveContainer>
   );
 }

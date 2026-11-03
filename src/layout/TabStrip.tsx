@@ -1,4 +1,6 @@
+import { useCallback, useState } from "react";
 import { Icon } from "@/components/walkme/Icon";
+import { AddFilterPopup } from "@/components/walkme/AddFilterPopup";
 import { TextButton } from "@/components/walkme/ui/TextButton";
 import { cn } from "@/lib/utils";
 
@@ -24,6 +26,8 @@ export function FilterRow({
   dateLabel?: string;
   showAddFilter?: boolean;
 }) {
+  const [filterOpen, setFilterOpen] = useState(false);
+  const closeFilter = useCallback(() => setFilterOpen(false), []);
   return (
     <div className="flex h-12 items-center gap-sp60 px-sp80">
       <button
@@ -34,7 +38,14 @@ export function FilterRow({
         <span className="wm-t2">{dateLabel}</span>
         <Icon name="chevron-down" size={14} className="ml-sp40 text-icon" />
       </button>
-      {showAddFilter && <TextButton icon="filter">Add Filter</TextButton>}
+      {showAddFilter && (
+        <div className="relative">
+          <TextButton icon="filter" onClick={() => setFilterOpen((o) => !o)}>
+            Add Filter
+          </TextButton>
+          {filterOpen && <AddFilterPopup onClose={closeFilter} />}
+        </div>
+      )}
     </div>
   );
 }

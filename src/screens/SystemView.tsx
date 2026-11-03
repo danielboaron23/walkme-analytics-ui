@@ -3,12 +3,14 @@ import { Icon } from "@/components/walkme/Icon";
 import { TitleBar } from "@/layout/TitleBar";
 import { FilterRow, TabStrip } from "@/layout/TabStrip";
 import { OverviewContent } from "@/components/walkme/OverviewContent";
+import { ActiveUsersContent } from "@/components/walkme/ActiveUsersContent";
 import { SwtContent } from "@/components/walkme/SwtContent";
 import { SwtLoading } from "@/components/walkme/SwtLoading";
 import { SwtDetailPanel, SwtDetailWide } from "@/components/walkme/panel/SwtDetailPanel";
 import type { ViewMode } from "@/components/walkme/panel/ViewModeMenu";
 
 const SWT_TAB = "Smart Walk- Thrus";
+const ACTIVE_USERS_TAB = "Active users";
 const LOAD_MS = 2500;
 
 /** A system dashboard: shared chrome + tabbed content (Overview, Smart Walk-Thrus, …). */
@@ -83,7 +85,8 @@ export function SystemView({
       <div className="px-sp80 pt-sp40">
         {isOverview && <OverviewContent />}
         {tab === SWT_TAB && (loading ? <SwtLoading /> : <SwtContent onOpenDetail={openDetail} />)}
-        {!isOverview && tab !== SWT_TAB && (
+        {tab === ACTIVE_USERS_TAB && <ActiveUsersContent />}
+        {!isOverview && tab !== SWT_TAB && tab !== ACTIVE_USERS_TAB && (
           <div className="flex h-[400px] items-center justify-center wm-t1 text-text-secondary">
             {tab} — coming soon
           </div>

@@ -20,7 +20,7 @@ export function Avatar({
         width: size,
         height: size,
         fontFamily: "var(--font-body)",
-        fontSize: size <= 20 ? 8 : 12,
+        fontSize: size <= 20 ? 8 : size <= 24 ? 10 : 12,
         lineHeight: 1,
       }}
     >

@@ -24,6 +24,8 @@
   --color-text-primary: #2f426c;
   --color-text-secondary: #616f8f;
   --color-text-tertiary: #8b95ad;
+  --color-tag-bg: #385feb24;
+  --color-scroll: #afbff7;
   --color-text-inverted: #ffffff;
   --color-text-link: #385feb;
 
@@ -76,6 +78,7 @@
   --radius-cr30: 8px;
   --radius-cr40: 12px;
   --radius-pill: 99999px;
+  --radius-cr10: 2px;
 
   /* --- Fonts --- */
   --font-heading: "Poppins", "Montserrat", system-ui, sans-serif;
@@ -108,6 +111,11 @@
    Headings: Poppins SemiBold | Texts: Proxima Nova
    ============================================================ */
 @layer components {
+  /* Thin scrollbar for the Add Filter list (Figma A-Scroll: 4px thumb) */
+  .filter-popup-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scroll) transparent;
+  }
   .wm-h1 {
     font-family: var(--font-heading);
     font-weight: 600;

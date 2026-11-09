@@ -16,8 +16,8 @@ const DATA = [
   { system: "Google Drive", active: 680, interacted: 130 },
 ];
 
-const ACTIVE = "#afbff7";
-const INTERACTED = "#8b9ddb";
+const ACTIVE = "var(--color-brand)";
+const INTERACTED = "var(--color-scroll)";
 
 function formatK(v: number) {
   if (v >= 1000) return `${(v / 1000).toFixed(1).replace(".", ",")}k`;

@@ -27,8 +27,8 @@ export function SystemsOverview({
             <TopSystemsBarChart />
             <ChartLegend
               items={[
-                { color: "#afbff7", label: "Active users" },
-                { color: "#8b9ddb", label: "Users who interacted with WalkMe" },
+                { color: "var(--color-brand)", label: "Active users" },
+                { color: "var(--color-scroll)", label: "Users who interacted with WalkMe" },
               ]}
             />
           </DashboardCard>

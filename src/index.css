@@ -1,0 +1,192 @@
+/* ============================================================
+   FONTS  (must precede all other rules per CSS @import spec)
+   - Poppins  -> headings (Google Fonts)
+   - Proxima Nova -> body text (web-font CDN, to match Figma exactly;
+     "Montserrat" kept as a close fallback if the CDN is unavailable)
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/proxima-nova");
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ============================================================
+   WALKME DESIGN TOKENS  (extracted from Figma variables)
+   ============================================================ */
+@theme {
+  /* --- Brand / Action --- */
+  --color-brand: #385feb;
+  --color-brand-hover: #2f51c9;
+  --color-brand-ghost: #385feb0d; /* ghost default / pressed */
+  --color-brand-ghost-hover: #385feb17;
+
+  /* --- Text --- */
+  --color-text-primary: #2f426c;
+  --color-text-secondary: #616f8f;
+  --color-text-tertiary: #8b95ad;
+  --color-tag-bg: #385feb24;
+  --color-scroll: #afbff7;
+  --color-text-inverted: #ffffff;
+  --color-text-link: #385feb;
+
+  /* --- Icon --- */
+  --color-icon: #6d81a6;
+  --color-icon-secondary: #616f8f;
+
+  /* --- Backgrounds / Surfaces --- */
+  --color-bg-app: #f0f3f9; /* primary app background */
+  --color-bg-surface: #ffffff; /* secondary / cards */
+  --color-bg-sky: #f7f9fc;
+  --color-bg-tint: #fafafc;
+  --color-bg-input: #f0f3f9;
+
+  /* --- Dark (sidebar / overlays) --- */
+  --color-dark: #172034;
+  --color-dark-shade-3: #172034;
+
+  /* --- Dividers / Elements --- */
+  --color-divider: #f0f3f9;
+  --color-divider-el: #ebeff7;
+  --color-divider-on-gray: #d5d9e2;
+
+  /* --- Infographic --- */
+  --color-info-lavender: #485686;
+  --color-info-lavender-tint: #e9ecf8;
+  --color-info-success: #22917a;
+
+  /* --- Color boxes (status chips) --- */
+  --color-box-aqua: #1e606c;
+  --color-box-aqua-bg: #b4dae1;
+  --color-box-orange: #8e4215;
+  --color-box-orange-bg: #f5c9af;
+  --color-box-violet: #6a4a87;
+  --color-box-violet-bg: #e0cef0;
+
+  /* --- Spacing scale (WalkMe SP / S generation) --- */
+  --spacing-sp5: 2px;
+  --spacing-sp10: 4px;
+  --spacing-sp20: 8px;
+  --spacing-sp30: 12px;
+  --spacing-sp40: 16px;
+  --spacing-sp60: 24px;
+  --spacing-sp70: 28px;
+  --spacing-sp80: 32px;
+  --spacing-dashboard: 24px;
+
+  /* --- Radius --- */
+  --radius-cr20: 4px;
+  --radius-cr30: 8px;
+  --radius-cr40: 12px;
+  --radius-pill: 99999px;
+  --radius-cr10: 2px;
+
+  /* --- Fonts --- */
+  --font-heading: "Poppins", "Montserrat", system-ui, sans-serif;
+  --font-body: "Proxima Nova", "Montserrat", system-ui, sans-serif;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+@layer base {
+  * {
+    @apply border-divider-el;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-app);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES  (WalkMe type ramp)
+   Headings: Poppins SemiBold | Texts: Proxima Nova
+   ============================================================ */
+@layer components {
+  /* Thin scrollbar for the Add Filter list (Figma A-Scroll: 4px thumb) */
+  .filter-popup-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scroll) transparent;
+  }
+  .wm-h1 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .wm-h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .wm-h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .wm-h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .wm-h5 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 16px;
+  }
+  /* Texts (Proxima Nova) */
+  .wm-t1 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .wm-t1-bold {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .wm-t2 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .wm-t2-semibold {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .wm-t3 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .wm-t3-semibold {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .wm-t4 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
+}

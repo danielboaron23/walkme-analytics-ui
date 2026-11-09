@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Vector">
+<path id="Vector_2" d="M7.5 2.5H13.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M7.5 7.5H13.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M7.5 12.5L13.5 12.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Vector_5" x="2.5" y="1.5" width="2" height="2" rx="0.5" stroke="currentColor"/>
+<rect id="Vector_6" x="2.5" y="6.5" width="2" height="2" rx="0.5" stroke="currentColor"/>
+<rect id="Vector_7" x="2.5" y="11.5" width="2" height="2" rx="0.5" stroke="currentColor"/>
+</g>
+</svg>

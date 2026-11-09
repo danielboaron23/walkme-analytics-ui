@@ -38,7 +38,7 @@ function AxisTick({ x, y, payload }: any) {
 export function TopSystemsBarChart() {
   return (
     <ResponsiveContainer width="100%" height={218}>
-      <BarChart data={DATA} barGap={4} barCategoryGap="22%" margin={{ top: 8, right: 0, bottom: 0, left: -8 }}>
+      <BarChart data={DATA} barGap={4} barCategoryGap="22%" margin={{ top: 8, right: 0, bottom: 0, left: -8 }} style={{ backgroundColor: "var(--color-text-primary)" }}>
         <CartesianGrid vertical={false} stroke="#ebeff7" />
         <XAxis
           dataKey="system"

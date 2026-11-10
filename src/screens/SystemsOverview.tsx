@@ -23,7 +23,10 @@ export function SystemsOverview({
       <div className="flex flex-col gap-sp60 px-sp80 pt-sp10">
         {/* Two chart cards */}
         <div className="grid grid-cols-2 gap-sp60">
-          <DashboardCard title="Top 5 systems">
+          <DashboardCard
+            title="Top 5 systems"
+            className="bg-text-link"
+          >
             <TopSystemsBarChart />
             <ChartLegend
               items={[

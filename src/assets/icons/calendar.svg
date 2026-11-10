@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<g id="A-Icon-DatePicker">
+<g id="Vector">
+<path id="Vector_2" d="M4 4.5H16C16.8284 4.5 17.5 5.17157 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H4C3.17157 16.5 2.5 15.8284 2.5 15V6C2.5 5.17157 3.17157 4.5 4 4.5Z" stroke="currentColor"/>
+<path id="Vector_3" d="M6.5 5.5L6.5 2.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M13.5 5.5L13.5 2.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M17.5 8.5L2.5 8.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>

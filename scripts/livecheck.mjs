@@ -1,0 +1,10 @@
+import { chromium } from "playwright";
+const b = await chromium.launch();
+const p = await b.newPage({ viewport:{width:1440,height:900}, deviceScaleFactor:1 });
+const errs=[];
+p.on("response", r => { if (r.status()>=400) errs.push(`${r.status()} ${r.url()}`); });
+await p.goto("https://danielboaron23.github.io/walkme-analytics-ui/", {waitUntil:"networkidle"});
+await p.waitForTimeout(1500);
+await p.screenshot({ path: ".live.png", clip:{x:0,y:0,width:1440,height:820} });
+console.log("failed requests:", errs.length ? errs.slice(0,5).join("\n") : "none");
+await b.close();

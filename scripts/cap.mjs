@@ -1,0 +1,10 @@
+import { chromium } from "playwright";
+const b = await chromium.launch();
+const p = await b.newPage({ viewport:{width:1920,height:1080}, deviceScaleFactor:1 });
+await p.goto("http://localhost:5173/", {waitUntil:"networkidle"});
+await p.waitForTimeout(700);
+await p.screenshot({ path: ".my1.png", clip:{x:0,y:0,width:1920,height:1080} });
+await p.locator("button", { hasText: "Salesforce Lightning" }).first().click();
+await p.waitForTimeout(1000);
+await p.screenshot({ path: ".my2.png", clip:{x:0,y:0,width:1920,height:1080} });
+await b.close(); console.log("captured my1,my2");

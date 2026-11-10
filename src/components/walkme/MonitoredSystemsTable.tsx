@@ -93,7 +93,7 @@ export function MonitoredSystemsTable({
               r.muted && "opacity-45"
             )}
           >
-            <span className="wm-t2 truncate text-text-primary">{r.system}</span>
+            <span className="wm-t2 truncate text-text-link">{r.system}</span>
             <span className="wm-t2 text-text-primary">{r.active}</span>
             <span className="wm-t2 text-text-primary">
               {r.exposed} <span className="text-text-secondary">({r.exposedPct})</span>

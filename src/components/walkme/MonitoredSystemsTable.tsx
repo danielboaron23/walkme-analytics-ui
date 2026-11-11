@@ -55,7 +55,7 @@ export function MonitoredSystemsTable({
     "grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] gap-sp40";
 
   return (
-    <section className="flex flex-col rounded-cr40 bg-bg-surface px-sp60 py-sp40">
+    <section className="flex flex-col rounded-cr40 bg-brand px-sp60 py-sp40">
       {/* Header */}
       <header className="flex h-[60px] shrink-0 items-center justify-between">
         <div className="flex items-center gap-sp20">

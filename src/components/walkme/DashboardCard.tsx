@@ -26,7 +26,7 @@ export function DashboardCard({
   return (
     <section
       className={cn(
-        "flex flex-col rounded-cr40 bg-bg-surface px-sp60 py-sp40",
+        "flex flex-col rounded-cr40 bg-brand px-sp60 py-sp40",
         className
       )}
     >

@@ -59,7 +59,7 @@ export function MonitoredSystemsTable({
       {/* Header */}
       <header className="flex h-[60px] shrink-0 items-center justify-between">
         <div className="flex items-center gap-sp20">
-          <h3 className="wm-t1-bold text-text-primary">Monitored systems</h3>
+          <h3 className="wm-t1-bold text-text-primary">Monitored efefef</h3>
           <Counter>132</Counter>
         </div>
         <div className="flex items-center gap-sp30">

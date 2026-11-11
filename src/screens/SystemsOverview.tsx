@@ -25,7 +25,7 @@ export function SystemsOverview({
         <div className="grid grid-cols-2 gap-sp60">
           <DashboardCard
             title="Top 5 systems"
-            className="bg-text-link"
+            className="bg-bg-app"
           >
             <TopSystemsBarChart />
             <ChartLegend

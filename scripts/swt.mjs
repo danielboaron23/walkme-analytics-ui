@@ -1,0 +1,13 @@
+import { chromium } from "playwright";
+const b = await chromium.launch();
+const p = await b.newPage({ viewport:{width:1920,height:1080}, deviceScaleFactor:1 });
+await p.goto("http://localhost:5173/", {waitUntil:"networkidle"});
+await p.waitForTimeout(600);
+await p.locator("button", { hasText: "Salesforce Lightning" }).first().click();
+await p.waitForTimeout(800);
+await p.locator("button", { hasText: "Smart Walk- Thrus" }).first().click();
+await p.waitForTimeout(500);
+await p.screenshot({ path: ".my-swt-loading.png", clip:{x:0,y:0,width:1920,height:1080} });
+await p.waitForTimeout(2600);
+await p.screenshot({ path: ".my-swt-filled.png", fullPage:true });
+await b.close(); console.log("captured swt loading+filled");

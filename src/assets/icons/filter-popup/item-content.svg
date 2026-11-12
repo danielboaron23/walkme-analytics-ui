@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<g id="A-Icon-Folder">
+<g id="Vector">
+<mask id="stroke0_0_7360" fill="white">
+<path d="M1 13V3C1 2.44772 1.44772 2 2 2H5.69722C5.89465 2 6.08766 2.05844 6.25192 2.16795L8.74808 3.83205C8.91234 3.94156 9.10535 4 9.30278 4H14C14.5523 4 15 4.44772 15 5V13C15 13.5523 14.5523 14 14 14H2C1.44772 14 1 13.5523 1 13Z"/>
+</mask>
+<path id="Vector_2" d="M1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V5C15 4.44772 14.5523 4 14 4H9.30278C9.10535 4 8.91234 3.94156 8.74808 3.83205L6.25192 2.16795C6.08766 2.05844 5.89465 2 5.69722 2H2C1.44772 2 1 2.44772 1 3Z" stroke-width="2" stroke="#6D81A6" mask="url(#stroke0_0_7360)"/>
+</g>
+</g>
+</g>
+</svg>

@@ -8,6 +8,7 @@ import { TextButton } from "@/components/walkme/ui/TextButton";
  */
 export function TitleBar({
   title,
+  subtitle,
   icon,
   environment,
   exportVariant = "outline",
@@ -15,6 +16,8 @@ export function TitleBar({
   onBack,
 }: {
   title: string;
+  /** Optional one-line description under the title. */
+  subtitle?: string;
   icon?: React.ReactNode;
   environment?: string;
   exportVariant?: "outline" | "link";
@@ -35,7 +38,14 @@ export function TitleBar({
         ) : (
           icon
         )}
-        <h1 className="wm-h1 text-text-primary">{title}</h1>
+        {subtitle ? (
+          <div className="flex flex-col">
+            <h1 className="wm-h1 text-text-primary">{title}</h1>
+            <p className="wm-t2 text-text-secondary">{subtitle}</p>
+          </div>
+        ) : (
+          <h1 className="wm-h1 text-text-primary">{title}</h1>
+        )}
         {environment && (
           <>
             <span className="mx-sp10 text-divider-on-gray">|</span>

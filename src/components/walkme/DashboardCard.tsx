@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
  */
 export function DashboardCard({
   title,
+  subtitle,
   info = true,
   headerRight,
   footer,
@@ -16,6 +17,8 @@ export function DashboardCard({
   children,
 }: {
   title: React.ReactNode;
+  /** Optional one-line description shown under the title. */
+  subtitle?: React.ReactNode;
   info?: boolean;
   headerRight?: React.ReactNode;
   footer?: React.ReactNode;
@@ -31,9 +34,14 @@ export function DashboardCard({
       )}
     >
       <header className="flex h-[60px] shrink-0 items-center justify-between">
-        <div className="flex items-center gap-sp20">
-          <h3 className="wm-t1-bold text-text-primary">{title}</h3>
-          {info && <Icon name="info" size={16} className="text-icon" />}
+        <div className="flex flex-col">
+          <div className="flex items-center gap-sp20">
+            <h3 className="wm-t1-bold text-text-primary">{title}</h3>
+            {info && <Icon name="info" size={16} className="text-icon" />}
+          </div>
+          {subtitle && (
+            <p className="wm-t3 text-text-secondary">{subtitle}</p>
+          )}
         </div>
         {headerRight}
       </header>

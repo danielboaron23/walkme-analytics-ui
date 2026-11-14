@@ -17,13 +17,26 @@ export function SystemsOverview({
 }) {
   return (
     <div className="flex flex-col pb-sp80">
-      <TitleBar title="Systems Overview" exportVariant="outline" />
-      <FilterRow dateLabel="Last week (May 4 - May 10)" showAddFilter={false} />
+      <TitleBar
+        title="Systems Overview"
+        subtitle="How employees adopt WalkMe across your monitored systems."
+        exportVariant="outline"
+      />
+      <FilterRow
+        dateLabel="Last week (May 4 - May 10)"
+        showAddFilter={false}
+        meta={
+          <>
+            Showing top 5 of{" "}
+            <b className="font-semibold text-text-primary">132</b> monitored systems
+          </>
+        }
+      />
 
       <div className="flex flex-col gap-sp60 px-sp80 pt-sp10">
         {/* Two chart cards */}
         <div className="grid grid-cols-2 gap-sp60">
-          <DashboardCard title="Top 5 systems">
+          <DashboardCard title="Top 5 systems" subtitle="Ranked by active users">
             <TopSystemsBarChart />
             <ChartLegend
               items={[
@@ -33,7 +46,10 @@ export function SystemsOverview({
             />
           </DashboardCard>
 
-          <DashboardCard title="Top systems by engagemnt">
+          <DashboardCard
+            title="Top systems by engagement"
+            subtitle="Daily, May 4 – May 10"
+          >
             <EngagementLineChart />
             <ChartLegend
               items={ENGAGEMENT_SERIES.map((s) => ({

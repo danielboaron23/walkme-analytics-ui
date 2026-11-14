@@ -22,9 +22,12 @@ export const TABS = [
 export function FilterRow({
   dateLabel = "Last week (Jan 1 - Jan 7)",
   showAddFilter = true,
+  meta,
 }: {
   dateLabel?: string;
   showAddFilter?: boolean;
+  /** Optional context text shown after the filters. */
+  meta?: React.ReactNode;
 }) {
   const [filterOpen, setFilterOpen] = useState(false);
   const closeFilter = useCallback(() => setFilterOpen(false), []);
@@ -46,6 +49,7 @@ export function FilterRow({
           {filterOpen && <AddFilterPopup onClose={closeFilter} />}
         </div>
       )}
+      {meta && <span className="wm-t2 text-text-secondary">{meta}</span>}
     </div>
   );
 }

@@ -34,7 +34,7 @@ function formatK(v: number) {
 export function EngagementLineChart() {
   return (
     <ResponsiveContainer width="100%" height={210}>
-      <LineChart data={DATA} margin={{ top: 8, right: 8, bottom: 0, left: -4 }}>
+      <LineChart data={DATA} margin={{ top: 8, right: 28, bottom: 0, left: -4 }}>
         <CartesianGrid vertical={false} stroke="#ebeff7" />
         <XAxis
           dataKey="date"

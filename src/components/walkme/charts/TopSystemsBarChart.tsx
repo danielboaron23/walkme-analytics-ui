@@ -20,45 +20,57 @@ const ACTIVE = "#afbff7";
 const INTERACTED = "#8b9ddb";
 
 function formatK(v: number) {
-  if (v >= 1000) return `${(v / 1000).toFixed(1).replace(".", ",")}k`;
-  return `${v}`;
+  if (v < 1000) return `${v}`;
+  return `${v / 1000}k`;
 }
 
+/** Ranked row label: logo chip + full system name, never truncated. */
 function AxisTick({ x, y, payload }: any) {
   return (
-    <foreignObject x={x - 60} y={y + 4} width={120} height={28}>
-      <div className="flex items-center justify-center gap-sp10">
+    <foreignObject x={x - 156} y={y - 14} width={150} height={28}>
+      <div className="flex h-7 items-center gap-sp20">
         <SystemLogo name={payload.value} size={24} />
-        <span className="wm-t3 text-text-secondary">{payload.value}</span>
+        <span className="wm-t2 whitespace-nowrap text-text-primary">
+          {payload.value}
+        </span>
       </div>
     </foreignObject>
   );
 }
 
+/** Top 5 systems, ranked by active users (horizontal bars). */
 export function TopSystemsBarChart() {
   return (
-    <ResponsiveContainer width="100%" height={218}>
-      <BarChart data={DATA} barGap={4} barCategoryGap="22%" margin={{ top: 8, right: 0, bottom: 0, left: -8 }}>
-        <CartesianGrid vertical={false} stroke="#ebeff7" />
+    <ResponsiveContainer width="100%" height={260}>
+      <BarChart
+        layout="vertical"
+        data={DATA}
+        barGap={2}
+        barCategoryGap="26%"
+        margin={{ top: 4, right: 16, bottom: 0, left: 0 }}
+      >
+        <CartesianGrid horizontal={false} stroke="#ebeff7" />
         <XAxis
-          dataKey="system"
-          tickLine={false}
-          axisLine={false}
-          interval={0}
-          height={28}
-          tick={<AxisTick />}
-        />
-        <YAxis
+          type="number"
           ticks={[0, 400, 800, 1200, 1600]}
           domain={[0, 1600]}
           tickLine={false}
           axisLine={false}
-          width={34}
+          tickMargin={8}
           tick={{ fill: "#616f8f", fontSize: 12, fontFamily: "var(--font-body)" }}
           tickFormatter={formatK}
         />
-        <Bar dataKey="active" fill={ACTIVE} barSize={59} radius={[4, 4, 0, 0]} isAnimationActive={false} />
-        <Bar dataKey="interacted" fill={INTERACTED} barSize={59} radius={[4, 4, 0, 0]} isAnimationActive={false} />
+        <YAxis
+          type="category"
+          dataKey="system"
+          tickLine={false}
+          axisLine={false}
+          interval={0}
+          width={162}
+          tick={<AxisTick />}
+        />
+        <Bar dataKey="active" fill={ACTIVE} barSize={12} radius={[0, 4, 4, 0]} isAnimationActive={false} />
+        <Bar dataKey="interacted" fill={INTERACTED} barSize={12} radius={[0, 4, 4, 0]} isAnimationActive={false} />
       </BarChart>
     </ResponsiveContainer>
   );
